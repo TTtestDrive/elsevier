@@ -18,7 +18,6 @@ import Checkbox from "@material-ui/core/Checkbox";
 import IconButton from "@material-ui/core/IconButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import DeleteIcon from "@material-ui/icons/Delete";
-import FilterListIcon from "@material-ui/icons/FilterList";
 import { lighten } from "@material-ui/core/styles/colorManipulator";
 import myData from './data/DataForTable.json';
 import TextField from '@material-ui/core/TextField';
@@ -162,9 +161,18 @@ let EnhancedTableToolbar = props => {
           </Typography>
           
         ) : (
-          <Typography variant="title" id="tableTitle">
+          <div>
+          <Typography variant="title" id="tableTitle" style={{ display: 'inline', marginRight: 25 }} >
             People
           </Typography>
+              
+          
+                    <TextField  
+                    placeholder="Search"
+                    autoComplete="on"
+                    onChange={handleSearch} 
+                    value={value}/>
+                    </div>
         )}
       </div>
       <div className={classes.spacer} />
@@ -178,14 +186,7 @@ let EnhancedTableToolbar = props => {
             </IconButton>
           </Tooltip>
         ) : (
-          <div>
-          
-          <TextField  
-          placeholder="Search"
-          autoComplete="on"
-          onChange={handleSearch} 
-          value={value}/>
-          </div>
+          <div></div>
         )}
       </div>
     </Toolbar>

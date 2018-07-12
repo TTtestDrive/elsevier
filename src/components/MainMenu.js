@@ -31,7 +31,7 @@ function MainMenu(props) {
           <Typography variant="title" color="inherit" className={classes.flex} > 
             ELSEVIER | Test
           </Typography>
-          <Button color="inherit">GitHub</Button>
+          <Button color="inherit" href="https://github.com/TTtestDrive/elsevier">GitHub</Button>
         </Toolbar>
       </AppBar>
     </div>
